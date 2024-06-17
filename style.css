@@ -1,0 +1,192 @@
+:root {
+    --background-color: #0e3b50;
+    --text-color: #d5ebed;
+    --button-bg-color: #1a1a1a;
+    --button-hover-bg-color: #333;
+    --button-active-bg-color: #4fe3f6;
+    --button-text-color: #000;
+    --blue-color: #5ae8fc;
+}
+
+html{
+    background-image: url(Img/Mynewdesign.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    background: #121212;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--blue-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logo {
+    position: absolute;
+ 
+}
+
+img{
+    opacity: 50%;
+    filter: drop-shadow(3px 0 var(--text-color));
+    width: 100%;
+}
+
+.title_encrip{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    color: var(--button-hover-bg-color);
+    text-transform: uppercase;
+    width: 100%;
+    animation: animate 10s linear infinite;
+    letter-spacing: 5px;
+    font-size: 150%;
+}
+@keyframes animate 
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% 
+    {
+        color: var(--button-hover-bg-color);
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100% 
+    {
+        color: whitesmoke;
+        text-shadow: 0 0 10px var(--blue-color),
+        0 0 20px var(--blue-color),
+        0 0 40px var(--blue-color),
+        0 0 80px var(--blue-color),
+        0 0 160px var(--blue-color);
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    
+}
+
+section {
+    flex: 1;
+    justify-content: space-around;
+}
+
+.text-area, .resultado {
+    width: 100%;
+    height: 200px;
+    background: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid var(--lue-color);
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px var(--blue-color);
+}
+
+
+.informacion {
+    text-align: center;
+    margin: 10px 0;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+
+.botones, .copiar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    background: var(--button-bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--blue-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.01s, box-shadow 0.9s, color 0.3s;
+    box-shadow: 0 0 10px var(--blue-color), 0 0 20px var(--blue-color);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Orbitron';
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 200%;
+    background: var(--blue-color);
+    transition: 0.5s;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+}
+
+button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+button:hover {
+    background: var(--button-hover-bg-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--blue-color), 0 0 30px var(--blue-color);
+    color: var(--button-active-bg-color);
+}
+
+/*Mobil*/
+@media (max-width: 450px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    img {
+        width: 70%;
+    }
+
+    .title_encrip {
+        margin-top: 30px;
+        font-size: 1.3em;
+        
+    }
+
+    main {
+        display: inline-block;
+    }
+
+    .botones {
+        margin-bottom: 10%;
+    }
+}
