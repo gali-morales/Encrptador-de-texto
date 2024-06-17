@@ -1,13 +1,1 @@
-{
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "Img"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Encriptador de Texto"
-	}
-}
+
